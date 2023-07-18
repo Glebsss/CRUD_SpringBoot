@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<style>
+    table {
+        border-spacing: 0 5px;
+        font: bold 100% Georgia, serif;
+        margin: 40px 0;
+        text-shadow: 5px 5px 5px #3F3F7F;
+        background: #B1B9D9;
+        text-align: center;
+        vertical-align: middle;
+        width: 50%;
+        border: 10px solid #7b00ff;
+    }
+
+    caption {
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    th {
+        color: #7348ab;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    input, button {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #ff0000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #cc0018;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #006fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #0055cc;
+    }
+</style>
+<p style ="color:#006fff" th:text="${'Name: ' + person.getName()+ ',   Age: '+ person.getAge()}">VALUE</p>
+
+<p style ="color:#006fff" th:text="${'Email: ' + person.getEmail()}">VALUE</p>
+<p style ="color:#006fff" th:text="${'ID: ' + person.getId()}">VALUE</p>
+
+<a th:href="@{/people/{id}/edit(id=${person.getId()})}" class="button">Edit</a>
+<br/>
+<hr/>
+
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+    <input type = "submit" value="Delete"/>
+</form>
+</body>
+</html>

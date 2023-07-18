@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/CRUD_SpringBoot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CRUD_SpringBoot/src/main/java/spring/springBoot/CRUD_SpringBoot/controllers/PeopleController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CRUD_SpringBoot/src/main/java/spring/springBoot/CRUD_SpringBoot/dao/PersonDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CRUD_SpringBoot/src/main/java/spring/springBoot/CRUD_SpringBoot/models/Person.java" charset="UTF-8" />
+  </component>
+</project>
