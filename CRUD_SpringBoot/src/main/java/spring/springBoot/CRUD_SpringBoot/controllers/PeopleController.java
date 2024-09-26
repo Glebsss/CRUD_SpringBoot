@@ -34,17 +34,16 @@ public class PeopleController {
     }
 
     @GetMapping("/new")
-//    public String newPerson(Model model)
     public String newPerson(@ModelAttribute("person") Person person) {
-//        model.addAttribute("person", new Person());
+
 
         return "people/new";
     }
 
     @PostMapping()
     public String create(@ModelAttribute("person") @Valid Person person,
-                         BindingResult bindingResult) { //объект с валидациями ошибок
-        if (bindingResult.hasErrors()) //Если есть ошибки, возвращаем форму создания человека, уже с указанием ошибок
+                         BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return "people/new";
 
         personDAO.save(person);
